@@ -1,0 +1,25 @@
+    DAY 3  ARMSTRONG NUMBER FOR 3 DIGIT
+
+
+
+
+    #include <stdio.h>
+#include <math.h>
+int main() {
+    int number, originalNumber, remainder, sum = 0;
+    printf("Three-digit Armstrong numbers are: ");
+    for (number = 100; number <= 999; ++number) {
+        sum = 0;
+        originalNumber = number;
+        while (originalNumber != 0) {
+            remainder = originalNumber % 10;
+            sum += remainder * remainder * remainder;
+            originalNumber /= 10;
+        }
+        if (sum == number) {
+            printf("%d ", number);
+        }
+    }
+    printf("\n");
+    return 0;
+}
